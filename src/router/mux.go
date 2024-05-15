@@ -11,6 +11,10 @@ func Router() *http.ServeMux {
 	mux.HandleFunc("/users", handlers.ListUsersHandler)
 	// Rota para salvar um usuário
 	mux.HandleFunc("POST /users", handlers.SaveUserHandler)
+	// Rota para deletar um usuário
+	mux.HandleFunc("DELETE /users", handlers.DeleteUserHandler)
+	// Rota para atualizar um usuário
+	mux.HandleFunc("PUT /users", handlers.UpdateUserHandler)
 
 	return mux
 }
